@@ -6,7 +6,7 @@
  * Date: 05.08.14
  * Time: 14:32
  */
-class shopDevelopertoolsPluginViewHelper extends waViewHelper
+class shopDevelopertoolsPluginViewHelper
 {
 
     private static $routing;
