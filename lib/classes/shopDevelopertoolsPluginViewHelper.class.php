@@ -46,16 +46,16 @@ class shopDevelopertoolsPluginViewHelper extends waViewHelper
         return $theme_path;
     }
 
-    /*
-     * Call from Smarty: {developerToolsShopViewHelper::getCurrencies()}
+    /**
+     * Call from Smarty: {shopDevelopertoolsPluginViewHelper::getCurrencies()}
      */
     public static function getCurrencies()
     {
         return wa('shop')->getConfig()->getCurrencies();
     }
 
-    /*
-     * Call from Smarty: {developerToolsShopViewHelper::getReviewsByField($field, $value, $status = 'approved', $order='DESC', $limit=false)}
+    /**
+     * Call from Smarty: {shopDevelopertoolsPluginViewHelper::getReviewsByField($field, $value, $status = 'approved', $order='DESC', $limit=false)}
      *
      * @field - field in table shop_product_reviews. For example 'product_id'
      * @status - status of the review in database, e.g. 'approved'
@@ -75,8 +75,8 @@ class shopDevelopertoolsPluginViewHelper extends waViewHelper
         return $reviews;
     }
 
-    /*
-     * Call from Smarty: {developerToolsShopViewHelper::getReviewsByFieldHtml($field, $value, $status = 'approved', $order='DESC', $limit=false)}
+    /**
+     * Call from Smarty: {shopDevelopertoolsPluginViewHelper::getReviewsByFieldHtml($field, $value, $status = 'approved', $order='DESC', $limit=false)}
      *
      * @field - field in table shop_product_reviews. For example 'product_id'
      * @status - status of the review in database, e.g. 'approved'
@@ -104,8 +104,8 @@ class shopDevelopertoolsPluginViewHelper extends waViewHelper
         return $output;
     }
 
-    /*
-     * Call from Smarty: {$reviewsCount = developerToolsShopViewHelper::getReviewsTotalCount($product_id)}
+    /**
+     * Call from Smarty: {$reviewsCount = shopDevelopertoolsPluginViewHelper::getReviewsTotalCount($product_id)}
      */
     public static function getReviewsTotalCount($product_id)
     {
@@ -113,7 +113,7 @@ class shopDevelopertoolsPluginViewHelper extends waViewHelper
         return $rm->count($product_id);
     }
 
-    /*
+    /**
      * Эта функция используется для асинхронных вызовов.
      * Вариант {$wa->shop->product($product_id)} мне не подходит.
      */
@@ -122,8 +122,8 @@ class shopDevelopertoolsPluginViewHelper extends waViewHelper
         return shopDevelopertoolsProductHandler::prepareProductArray($product_id);
     }
 
-    /*
-     * Call from Smarty: {developerToolsShopViewHelper::getProductByIdHtml($product_id)}
+    /**
+     * Call from Smarty: {shopDevelopertoolsPluginViewHelper::getProductByIdHtml($product_id)}
      */
     public static function getProductByIdHtml($id)
     {
